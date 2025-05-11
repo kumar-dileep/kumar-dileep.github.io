@@ -39,12 +39,16 @@
 	
     </style>
 
+    
+
+     
     <div class="navbar" > <font style="font-family: Georgia;
    font-variant: small-caps; font-size: 100%"> 
         <a href="index.html">Home</a>
            <!----- <a href="Research.html">Research Works</a> --->
         <a href="Emotional.html"> Emotional Health</a>
 	<a href="Contact.html"> Contact me</a>
+
 	</font>
     </div>
 
@@ -122,7 +126,12 @@
       <a href="#DMJ"> Daily Mood Journal (DMJ) and How to Write it. </a> <br><br>
 
       <a href="#15techniques"> 15 Frequently Used Techniques to Write Positive
-   Thoughts in DMJ. </a> <br><br>
+	Thoughts in DMJ. </a> <br><br>
+
+      <a href="#Download"> Download Daily Mood Journal
+      (template) </a> <br><br>
+
+      
 
 
       
@@ -1478,7 +1487,7 @@ conditions:
 	 <li> (<strong>necessary condition</strong>), You have a a
 thought (or identify a thought) that must crush the respective
 negative thought, or drastically reduce your belief in the negative
-thought (<strong>necessary condition</strong>),) and </li> <br>
+thought (<strong>necessary condition</strong>)) and </li> <br>
 
 	   <li> You must have a strong belief in the thougth for the
 	   chosen negative thought (<strong>sufficient
@@ -1490,7 +1499,56 @@ thought (<strong>necessary condition</strong>),) and </li> <br>
 There are 50 techniques that you can be applied to crush the negative
 thoughts. <strong> 15 frequently used techniques are
 	  discussed <a href="#15techniques">here</a></strong>.
- <br><br>
+	<br><br> For the example considered above, positive thoughts
+ for her negative thoughts would be: </li>
+
+
+	  <ul>
+	    <li> <strong>Negative thought:</strong> I am unlovable
+	    🡪 <br><strong>Positive thought:</strong> Sometimes I feel
+	    unlovable, especially during arguments, but not always.
+	    (<strong>Straightforward techniques</strong>). </li><br>
+
+	   <li><strong>Negative thought:</strong> No one cares about
+	   me. 🡪 <br><strong>Positive thought:</strong> It’s not
+	   entirely true — many of my friends and relatives care
+	   about me a lot. (<strong>Examine the
+	   evidence</strong>). </li> <br>
+
+	    <li> <strong>Negative thought:</strong> I am
+	    worthless. 🡪 <br><strong>Positive thought:</strong> No,
+	    taking this event into account has nothing to do with
+	    proving that I am worthless. (<strong>Examine the
+	    evidence</strong>). </li><br>
+
+	   
+
+	    <li> <strong>Negative thought:</strong> I am stuck in a
+	    bad relationship 🡪 <br> <strong>Positive thought:</strong>
+	    To some extent, I feel stuck in a difficult
+	    relationship. But in general, all relationships experience
+	    some conflict at some point. There's no guarantee that if
+	    I were in another relationship, such conflicts wouldn't
+	    happen there as well.(<strong>Socratic Method & Thinking
+	    in terms of Shades of Gray</strong>) </li><br>
+
+	    <li> <strong>Negative thought:</strong>I should not marry
+	    him. 🡪 <br> <strong>Positive thought:</strong> It would be
+	    nice if I were married to a different person, but there's
+	    still a high chance that similar conflicts would happen
+	    with them too.(<strong>Semantic Method & Thinking in terms
+	    of Shades of Gray</strong>) </li><br>
+
+	    <li> <strong>Negative thought:</strong>I am a bad
+	    wife. 🡪 <br> <strong>Positive thought:</strong> This
+	    single incident does not prove that I am a bad
+	    wife. Sometimes bad behavior happens, but that doesn't
+	    mean a bad person exists. If I try to define what a "bad
+	    person" is, I can't. In fact, surveys suggest that I'm not
+	    a bad person at all — they actually say I'm a nice
+	    person. (<strong>Let's define terms, and Survey
+	    technique</strong>) </li>
+	  </ul>
 	    
 	  
 	    <li> <strong> Step L and M: Current believe (% after) in
@@ -1505,12 +1563,27 @@ thoughts. <strong> 15 frequently used techniques are
 
 	    <li> Estimate and write your current intensities of
 emotions in % After column of <strong>Step M</strong>.
- </li></ul>
+	</li></ul> <br>
+
+	<li> <strong> Daily Mood Journal for the Women, who is
+	consider here in the example: </strong> </li>
+
+	
+  <center>
+	 <figure>
+	   <img src="35.png" alt="Description of image" style="border: 2px solid #000; border-radius: 0px; width: 700px; ">
+	    <figcaption> <h5> Figure: Daily Mood Journal for the Women, who is
+	consider here in the example.  </h5> </figcaption>
+    </figure>
+		    </center>
 
 	Note that if these intensities are not roughly matches with
 %Goal of Step H, you can use other techniques
 discussed <a href="#15techniques">here</a></strong> , and re-estimate.
-	    
+
+
+
+
      </td>
      </tr>
 
@@ -1552,12 +1625,42 @@ discussed <a href="#15techniques">here</a></strong> , and re-estimate.
 
 
 
-
-
-
+  <tr id="Download">
+    <td colspan="2" align="middle" bgcolor="lightblue"
+    style="font-size:18">
+   <b><font style="font-family: Georgia; font-variant: small-caps;
+   font-size: 100%"> Daily Mood Journal (Template)
+ </font> </b>
+    </td>
+  </tr>
    
   </tbody>
- </table>
+</table>
 
+
+ <object type="application/pdf" data="DMJ.pdf" width="100%" height="50%"></object>
+
+
+  <p id="visit-count"></p>
+
+  <script>
+    // Get the current count from localStorage
+    let visitCount = localStorage.getItem('visitCount');
+
+    // If no count exists, initialize it
+    if (!visitCount) {
+      visitCount = 1;
+    } else {
+      visitCount = parseInt(visitCount) + 1;
+    }
+
+    // Store the updated count back to localStorage
+    localStorage.setItem('visitCount', visitCount);
+
+    // Display the count
+    document.getElementById('visit-count').textContent = 
+      `Website Visit Count= ${visitCount} time(s)`;
+  </script>
+  
 </body>
 </html>
