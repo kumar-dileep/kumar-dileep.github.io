@@ -1,578 +1,334 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Dr. Dileep Kumar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-<body bgcolor="#FFDEAD">
-<meta charset="utf-8" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>Dr. Dileep Kumar</title>
-<meta name="generator" content="DocPad v6.79.4" />
-  <!-- Mobile viewport optimized: h5bp.com/viewport -->
-<meta name="viewport" content="width=max-width" />
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
- 
-    <style>
-        body {
-            margin: 0;
-	    font-family:  "Georgia";
-        }
-        .navbar {
-            background-color: lightblue;
-            overflow: hidden;
-            display: flex;
-            padding: 16px 20px;
-        }
-        .navbar a {
-            color: black;
-            text-decoration: none;
-            padding: 3px 20px;
-            margin: 0 8px;
-            font-size: 18px;
-        }
-        .navbar a:hover {
-            background-color: blue;
-            border-radius: 2px;
-        }
-    </style>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-       <div class="navbar" > <font style="font-family: Georgia;
-   font-variant: small-caps; font-size: 100%"> 
-       <a href="index.html">Home</a>
-     <!-----    <a href="Research.html">Research Works</a> --->
-        <a href="Expertise.html">  Experiences (Control Systems)</a>
-	<a href="Emotional.html"> Emotional Health</a>
-	</font>
-       </div>
-       
- <!----- <font face="verdana ref"> --->
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background-color: #FFDEAD;
+      color: #000;
+    }
 
+    /* Navbar */
+    .navbar {
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 6px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
 
-      <font face="Courier New">
- <table cellspacing="0" cellpadding="12" border="0" align="center">
-  <tbody>
-   <tr>
- <td  align="center" bgcolor="#FFDEAD">
-       <img src="Photo10.png" align="middle" width="100" height="100">
-      <h1 align="center"> <font style="font-family: Georgia;
-   font-variant: small-caps; font-size: 100%">Dr. Dileep
-   Kumar </font> </h1>
-      <h3 align="center" > <font style="font-family: courier;
-   font-variant:  font-size: 50%"> Ph.D. in Electrical Engineering, <br>
-	  IIT Kanpur, India</h3>
-      
-      <h4 align="center" > <font style="font-family: courier;
-   font-variant: font-size:
-   50%"> <a href="https://www.linkedin.com/in/dlpkmr53/"
-   target="_blank"> LinkedIn<i class="fab fa-linkedin"></i> </a>
-      </h4>
+    .navbar a {
+      color: black;
+      text-decoration: none;
+      padding: 10px 18px;
+      margin: 4px;
+      font-size: 18px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
 
+    .navbar a:hover {
+      background-color: blue;
+      color: white;
+    }
 
-      
-  
-      <h4 align="center" > <font style="font-family: courier;
-   font-variant: font-size:
-   50%"> 
-  Email: <a href="mailto:dileepk2024@iitkalumni.org">dileepk2024@iitkalumni.org</a>
-      </h4>
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      background-color: #FFDEAD;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
 
-      
-      <h4 align="center" > <font style="font-family: courier;
-   font-variant: font-size: 50%"> Contact Number: +91 8852974501
-      </h4>
-      
- <h4 align="center" > <font style="font-family: courier; font-variant:
-   font-size: 50%"> Downloads: <br> 1. <a href="Resume_Dileep.pdf" download> Resume</a> <br> 2. <a href="Final_Presentation.pdf" download> Ph.D. Defense Presentation</a>
- </h4>
- 
-     
-      
-      
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
 
- 
-    </td>
-    <td style="font-size:25" bgcolor="#FFDEAD">
+    .profile img {
+      border-radius: 50%;
+      border: 2px solid #000;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+    }
 
-       <header id="header" class="fixed-top">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
+    .profile-info {
+      text-align: center;
+    }
 
+    .outline {
+      text-align: left;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 15px 25px;
+      border-radius: 10px;
+    }
 
-      <a href="index.html" class="logo"></a>
+    .outline ul {
+      list-style: none;
+      padding-left: 0;
+    }
 
-     
+    .outline li {
+      margin: 6px 0;
+    }
 
-	  <h6 align="left" > <font style="font-family: courier;
-   font-variant: font-size: 100%"> 
-          <ul style="list-style: none;">
-	   <li> <strong> Outline: </strong></li> 
-	   <li><a href="#Aboutme"> About me</a></li> <br>
-	   <li><a href="#Education"> Education </a></li> <br>
-	   <li><a href="#Experiences"> Experiences </a></li> <br>
-           <li><a href="#Skills">Technical Skills</a></li> <br>
-	    <li><a href="#Fellowship">Fellowships</a></li> <br>
-          <li><a href="#Publications"> Publications </a></li>
-        </ul>
-       </h6>
+    /* Section headers */
+    .section-header {
+      background-color: lightblue;
+      text-align: center;
+      font-family: Georgia, serif;
+      font-variant: small-caps;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
 
-  </header><!-- End Header -->
+    p, li {
+      font-family: "Courier New", monospace;
+      font-size: 15px;
+      line-height: 1.6;
+      text-align: justify;
+    }
 
-    </td>
-   </tr>
+    ul {
+      margin-left: 25px;
+    }
 
-   
-  </tbody>
- </table>
+    strong {
+      color: #000;
+    }
 
+    @media (max-width: 768px) {
+      .profile {
+        flex-direction: column;
+        align-items: center;
+      }
+      .outline {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
 
- <font face="Courier New">
- <table align="center" cellspacing="0" cellpadding="8" border="0">
-  <tbody>
-       <tr>
+<body>
 
-     
-   </tr>
-    
-    
- <!---------------------Personal Information----------------------------->
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="Expertise.html">Experiences (Control Systems)</a>
+    <a href="Emotional.html">Emotional Health</a>
+  </div>
 
+  <div class="container">
+    <!-- Profile Section -->
+    <div class="profile">
+      <div class="profile-info">
+        <img src="Photo10.png" alt="Dr. Dileep Kumar Photo">
+        <h1>Dr. Dileep Kumar</h1>
+        <h3>Ph.D. in Electrical Engineering<br>IIT Kanpur, India</h3>
+        <h4><a href="https://www.linkedin.com/in/dlpkmr53/" target="_blank">LinkedIn <i class="fab fa-linkedin"></i></a></h4>
+        <h4>Email: <a href="mailto:dileepk2024@iitkalumni.org">dileepk2024@iitkalumni.org</a></h4>
+        <h4>Contact Number: +91 8852974501</h4>
+        <h4>
+          Downloads:<br>
+          1. <a href="Resume_Dileep.pdf" download>Resume</a><br>
+          2. <a href="Final_Presentation.pdf" download>Ph.D. Defense Presentation</a>
+        </h4>
+      </div>
 
-   
-   <tr id="Aboutme"> 
-    <td  colspan="2" align="middle" bgcolor="lightblue" style="font-size:18"> 
-   <b><font style="font-family: Georgia; font-variant: small-caps;
-   font-size: 100%">About me </font> </b>
-    </td>
-   </tr>
-  
-   <tr>
-    <td  colspan="2" style="font-size:15" bgcolor="#FFDEAD" align = "justify">
-   <li> <strong>Experienced System and Control Engineer</strong> with expertise in 
-  <strong>system engineering</strong> (electric vehicle requirements, architecture, and integration), 
-  <strong>control systems</strong> (analysis, design, implementation), 
-  <strong>electric vehicle</strong> (vehicle and tire dynamics, motor
-  control, path-tracking control, energy-efficiency optimization),
-  <strong>power electronics</strong>, 
-  <strong>embedded systems</strong>, and 
-  <strong>modeling/simulation</strong> in MATLAB. </li> <br>
-
-
- <li> Proven expertise in <strong>project management</strong>, 
-    <strong>cross-functional collaboration</strong>, and 
-  <strong>analytical and troubleshooting problem-solving</strong>, 
-  developed through collaboration with system and software engineering teams 
-  on the design and development of electric powertrain systems for 
-  <strong>Mahindra Electric Vehicles</strong>.  </li> <br>
-<br>
-
-
-    </td> <br>
-
-   
-
-
- 
-   
-
-   </tr>
-
-  
-   
-  <tr id="Education">
-    <td colspan="2" align="middle" bgcolor="lightblue"
-    style="font-size:18">
-   <b><font style="font-family: Georgia; font-variant: small-caps;
-   font-size: 100%"> Education</font> </b>
-    </td>
-  </tr>
-
-  
-   <tr>
-    <td  colspan="2" style="font-size:15" bgcolor="#FFDEAD" align = "justify">
- <ul>
-            <li><strong>Ph.D. in Electrical Engineering <br> (Control & Automation)</strong> – IIT Kanpur (2015 – 2023)</li> <br>
-            <li><strong>M.Tech in Electrical Engineering <br> (Control Systems)</strong> – NIT Patna (2010 – 2012)</li> <br>
-            <li><strong>B.Tech in Electronics and Communication Engineering</strong> – SMVD University, J&K (2006 – 2010)</li>
-        </ul>
-    </td>
-   </tr>
-
-
-    <tr id="Experiences">
-    <td colspan="2" align="middle" bgcolor="lightblue"
-    style="font-size:18">
-   <b><font style="font-family: Georgia; font-variant: small-caps;
-   font-size: 100%"> Professional Experinces</font> </b>
-    </td>
-  </tr>
-
-  
-   <tr>
-    <td  colspan="2" style="font-size:15" bgcolor="#FFDEAD" align = "justify">
- <h3>Mahindra & Mahindra (12/2023 – Present)</h3>
-        <p><strong>Lead Engineer – Electric Powertrain Software Development and Technical  Delivery</strong></p>
+      <div class="outline">
+        <h4><strong>Outline:</strong></h4>
         <ul>
-                       <li>Led collaboration with cross-functional
-teams (systems and software engineering) to ensure seamless and robust
-development of electric powertrain software for Mahindra Electric
-			 Vehicles.</li>
-
-	</ul>
-        
-        <h3>NIMS University, Jaipur (08/2012 – 07/2015)</h3>
-        <p><strong>Assistant Professor – Electrical Engineering</strong></p>
-        <ul>
-          <li>Taught Classical Control, Modern Control, Power Electronics, Embedded Systems, and MATLAB. </li>
-	  <li> Mentored Students in Research Projects related to Control and Power Electronics Applications. </li>
+          <li><a href="#Aboutme">About Me</a></li>
+          <li><a href="#Education">Education</a></li>
+          <li><a href="#Experiences">Experiences</a></li>
+          <li><a href="#Skills">Technical Skills</a></li>
+          <li><a href="#Fellowship">Fellowships</a></li>
+          <li><a href="#Publications">Publications</a></li>
         </ul>
-       
+      </div>
+    </div>
 
-    </td>
-
-   </tr>
- 
-
-
-   
-    <tr id="Skills">
-    <td colspan="2" align="middle" bgcolor="lightblue"
-    style="font-size:18">
-   <b><font style="font-family: Georgia; font-variant: small-caps;
-   font-size: 100%"> Technical Skills</font> </b>
-    </td>
-  </tr>
-
-  
-   <tr>
-    <td  colspan="2" style="font-size:15" bgcolor="#FFDEAD" align = "justify">
-
-
-       <ul>
-
-
-	 <li><strong>	 Control Systems:</strong>  PID-tuning, Loop Shaping, Disturbance Rejection, ADRC, DC and BLDC Motor Control.</li>
-
-	 
-	 <li><strong> Power Electronics:</strong>  Motor Controller (H-Bridge
-	 and Inverter), Power Converters, Solar-MPPT.</li>
-
-	 <li><strong> Electric Vehicles:</strong>  Vehicle Dynamics, Tire
-Dynamics, Autonomous Vehicles, Energy Efficiency, In-Wheel Motors,
-Electric Powertrain Hardware/Software, System Engineering, Root-Cause
-Analysis.
-</li>
-	 
-	 <li><strong>Embedded Systems & HW-SW Co-Design:</strong>  Expertise
-	 with STM32, dsPIC, ESP32, Raspberry Pi.  Serial Protocols:
-	 USART, CAN, SPI, I 2 C.
-
-	 
-	 <li><strong> Software & Simulation:</strong>  MATLAB, Simulink, Octave,
-C/C++, Python, CANoe, Bash, Latex.</li>
-
-	 
-	
-    </td>
-
-   </tr>
-
-   
-  <tr id="Education">
-    <td colspan="2" align="middle" bgcolor="lightblue"
-    style="font-size:18">
-   <b><font style="font-family: Georgia; font-variant: small-caps;
-   font-size: 100%">  Ph.D. Research: Abstract & Key Contriubutions</font> </b>
-    </td>
-  </tr>
-
-  
-   <tr>
-    <td  colspan="2" style="font-size:15" bgcolor="#FFDEAD" align = "justify">
-      
-	
-      <strong> Thesis title: </strong> Energy Usage and Tire Usage in
-      Electric Vehicles with In-Wheel Motors. <br> <br>
-
-      <strong> Abstract: </strong> &nbsp; Electric vehicles (EVs) with
-  in-wheel motors (IWMs) are a rapidly emerging technology. These EVs
-  lie in a wide power interval, are of different types belonging to
-  the categories of bikes, microcars, mid-size cars, full-size cars,
-  and buses, and use one or multiple IWMs. Additionally, IWMs enable a
-  wide range of vehicle configurations, free up space inside the EV,
-  obviate the need for mechanical transmission and axles, and enable
-  the EV to have modular designs. A modular design is often a wheel
-  assembly primarily consisting of an IWM, a steering motor,
-  suspension, and brake.  Among the many recent advancements in EV
-  technologies, the modular designs make overactuated EVs possible and
-  attractive. For example, a set of four modular designs can help
-  build a four-wheel independent steering four-wheel independent drive
-  (4WIS4WID) EV; this EV has received attention from the industry and
-  academia, especially in the last two decades. As the EVs with IWMs
-  1) lie in a wide power interval, 2) are of different types, 3) use
-  one or multiple IWMs, and 4) can help build overactuated EVs that
-  have the potential to achieve a condition known as optimal tire
-  usage (OTU), there is a need to investigate 1) these EVs from energy
-  usage perspective and 2) overacutated EVs from tire usage
-  perspective. This thesis explores EVs with IWMs from these two
-  perspectives.
-<br>
- &nbsp; Towards the energy usage perspective, this thesis considers
-  battery-powered EVs (BEVs), lying in the power interval of [0.25 --
-  360] kW and groups them into five classes. The energy usage of a BEV
-  is a determinant of its operational cost and environmental impact. A
-  graph of energy efficiency versus power is important while investing
-  in new BEV technologies. In constructing this graph over the said
-  power interval for single motor drive (SMD) BEVs, the existing
-  literature on energy efficiency provides some data for two of the
-  five classes, while for IWM BEVs, the literature provides some data
-  for just one value of power. To construct these graphs for both SMD
-  and IWM BEVs, this thesis performs a comprehensive study of each
-  class of BEV to gather realistic data for each stage involved in the
-  calculation of their energy efficiencies. It concludes that the
-  tank-to-wheel energy efficiency of an IWM BEV may be up to 18\%
-  higher than that of an SMD BEV of the same power. In examining how
-  efficient the BEVs are with respect to internal combustion engine
-  (ICE) vehicles, this thesis concludes that the well-to-wheels energy
-  efficiencies of IWM BEVs, SMD BEVs, and ICE vehicles, each of around
-  80 kW, are about 33\%, 30\%, and 18\%, respectively for natural gas
-  pathway.
-<br>
- &nbsp; Towards the tire usage perspective, this thesis primarily considers
-  4WIS4WID EVs, which are widely studied and are popular among
-  overactuated EVs. These EVs have an independent steering motor and
-  an independent driving motor for each wheel, for a total of eight
-  motors. About fifteen works in this emerging field have shown
-  partial or full path-tracking control (PTC) algorithms for these
-  EVs. Of the fifteen works, ten explicitly or implicitly aspire for
-  the condition known as OTU; the PTC algorithms are additionally
-  responsible for this condition. This condition helps achieve 1) a
-  superior vehicle stability margin that improves the vehicle's
-  stability, controllability, responsiveness, and cornering behavior,
-  and 2) some improvement in energy efficiency, in comparison to
-  conventional EVs. Seven of the ten works have shown full PTC
-  algorithms for these EVs. This thesis performs in-depth
-  block-diagrammatic examinations (BDEs) of five works among the seven
-  to understand a PTC algorithm deeply, and to identify modifications,
-  if any, needed for OTU.
-
-      <br>
-  &nbsp;The thesis finds that while these five works have performed suitable
-  control allocation for OTU, examining whether their motor control
-  systems (MCSs) are appropriate for fulfilling the control allocation
-  demands, is required. In particular, the BDEs reveal that a) two of
-  the five works have not paid attention to MCSs, b) the third work
-  needs modification in the driving MCSs, and c) the fourth and fifth
-  work seems to have appropriate MCSs for OTU. The MCSs of the fifth
-  work use a disturbance observer-based control (DOBC) scheme, and
-  seem like a good candidate for MCSs in the first three works. Thus
-  this thesis a) considers the MCSs of the fifth work, b) makes
-  appropriate modifications to them, c) performs the effectiveness
-  analyses of the MCSs and their modified versions, and d) therefrom
-  recommends necessary MCSs for the first three works. Further, this
-  thesis also examines the effectiveness of a widely used and popular
-  scheme, known as active disturbance rejection control (ADRC), as an
-  alternative to the DOBC scheme for the third and fifth works. The
-  PTC algorithm of the fifth work employs these two schemes to
-  demonstrate the achievement of OTU in simulation. It shows that
-  these schemes are sufficient (in simulation) for OTU in the fifth
-  work, and are likely to be sufficient for all PTC algorithms that
-      perform the control allocation required for OTU.
-      <br> 
-
-      
-       <center>
-	 <figure>
-	   <img src="PS.png" alt="Description of image" style="border: 2px solid #000; border-radius: 0px; width: 800px; ">
-	    <figcaption> <h5> Figure: Short introduction and problem
-	    statement of my PhD thesis. </h5> </figcaption>
-    </figure>
-       </center>
-       
-<strong> Key Contributions: </strong>
-<ul>
-  <li>A generalized Energy Flow Diagram (EFD) for calculating Tank-to-Wheel (TTW) energy efficiency for all types of BEVs.</li> <br>
-  
-  <li>A control-system-theoretic block diagram of the EFD, along with the derivation of an equation to compute the TTW energy efficiency of BEVs.</li><br>
-  
-  <li>An extensive literature survey to find, estimate, or assume efficiencies for the eight stages in the energy flow diagram across five types of BEVs.</li><br>
-  
-  <li>A graph of TTW energy efficiency versus electric vehicle power.</li>
-  <br>
-  <li>Calculation of TTW energy efficiency for arbitrary four-wheeled BEVs.</li><br>
-  
-  <li>A brief commentary on the TTW energy efficiency of a 4WIS4WID BEV.</li><br>
-  
-  <li>Recommendations for improving the TTW energy efficiency of BEVs.</li><br>
-  
-  <li>A brief commentary on:  
-    <ol type="a">
-      <li>Qualitative trends in TTW energy efficiency of BEVs,</li><br>
-      <li>Incorporating margins within TTW energy efficiency, and</li><br>
-      <li>Correctness of the developed results.</li><br>
-    </ol>
+    <!-- About Me -->
+    <div id="Aboutme" style="padding-top: 30px">
+      <div class="section-header">About Me</div>
+<ul style="line-height: 1.8; margin-left: 20px; list-style-type: disc;">
+  <li>
+    <strong>Control and Systems Engineer</strong> with expertise in
+    <strong>control system analysis</strong>, <strong>design</strong>, and <strong>implementation</strong>,
+    and in <strong>systems and software engineering</strong> of <strong>electric vehicles</strong>.
   </li>
-  
-  <li>Energy Flow Diagrams (EFDs) for calculating Well-to-Wheel (WTW) energy efficiency of IWM BEVs, SMD BEVs, and ICE vehicles — all full-sized cars — for the natural gas pathway.</li><br>
-  
-  <li>A discussion on the meaning and importance of Optimal Tire Usage (OTU).</li><br>
-  
-  <li>Presentation of three OTU indicators that estimate OTU in the KA works.</li><br>
-  
-  <li>A pictorial comparison of FWD, RWD, 4WID, and 4WIS4WID EVs based on OTU.</li><br>
-  
-  <li>Block-diagrammatic examination of five PTC algorithms of 4WIS4WID EVs for OTU.</li><br>
-  
-  <li>Block-diagrammatic representation of vehicle units using Pacejka and Burckhardt tire models.</li><br>
-  
-  <li>Discussion on the importance of drawing block diagrams for PTC algorithms.</li><br>
-  
-  <li>A brief comparison of the five referenced works.</li><br>
-  
-  <li>Identification of required modifications for OTU in the five referenced works.</li><br>
-  
-  <li>A brief commentary on block-diagrammatic linear models of DC motors and IWMs.</li><br>
-  
-  <li>Examination of the effectiveness of Disturbance Observer-Based Control (DOBC) and Active Disturbance Rejection Control (ADRC) schemes using a speed-dependent disturbance model under parametric uncertainty.</li><br>
-  
-  <li>Comparison of the DOBC and ADRC schemes for speed tracking of driving wheels.</li><br>
-  
-  <li>Recommendation of the DOBC and ADRC schemes for the driving motor control system (MCS) of one FCA work.</li><br>
-  
-  <li>Recommendation of two suitable DOBC structures for load-torque tracking MCSs of the remaining two FCA works.</li><br>
-  
-  <li>Employment of HGC, DOBC, and ADRC schemes in one PTC algorithm to examine OTU, demonstrated via simulation using MATLAB/Simulink.</li>
+
+  <li style="margin-top: 10px;">
+    Skilled in <strong>Systems Engineering</strong> (requirements, architecture, design, integration, and validation),
+    <strong>vehicle dynamics</strong>, <strong>motor control</strong>, <strong>path-tracking</strong>, and
+    <strong>energy-efficiency optimization</strong>, with strong experience in
+    <strong>power electronics</strong>, <strong>embedded systems</strong>, and
+    <strong>model-based design (MATLAB/Simulink)</strong>.
+  </li>
+
+  <li style="margin-top: 10px;">
+    Proven track record in <strong>cross-functional collaboration</strong>, delivering robust
+    <strong>electric powertrain systems</strong>, and driving <strong>innovation</strong> from
+    <strong>research to industry applications</strong>.
+  </li>
 </ul>
-    </td>
-   </tr>
+    </div>
+
+    <!-- Education -->
+    <div id="Education" style="padding-top: 30px">
+      <div class="section-header">Education</div>
+      <ul>
+        <li><strong>Ph.D. in Electrical Engineering (Control & Automation)</strong> – IIT Kanpur (2015–2023)</li>
+        <li><strong>M.Tech in Electrical Engineering (Control Systems)</strong> – NIT Patna (2010–2012)</li>
+        <li><strong>B.Tech in Electronics and Communication Engineering</strong> – SMVD University, J&K (2006–2010)</li>
+      </ul>
+    </div>
+
+    <!-- Experiences -->
+    <div id="Experiences" style="padding-top: 30px">
+      <div class="section-header">Professional Experiences</div>
+      <h3>Mahindra & Mahindra (12/2023 – Present)</h3>
+      <p><strong>Lead Engineer – Electric Powertrain Software Development and Technical Delivery</strong></p>
+      <ul>
+        <li>Led collaboration with cross-functional teams (systems and software engineering) to ensure seamless and robust development of electric powertrain software for Mahindra Electric Vehicles.</li>
+        <li>Working on (a) strengthening system engineering process development and (b) enhancing the energy efficiency of electric powertrain systems.</li>
+      </ul>
+
+      <h3>NIMS University, Jaipur (08/2012 – 07/2015)</h3>
+      <p><strong>Assistant Professor – Electrical Engineering</strong></p>
+      <ul>
+        <li>Taught Classical Control, Modern Control, Power Electronics, Embedded Systems, and MATLAB.</li>
+        <li>Mentored Students in Research Projects related to Control and Power Electronics Applications.</li>
+      </ul>
+    </div>
+
+    <!-- Skills header placeholder -->
+    <div id="Skills" style="padding-top: 30px">
+      <div class="section-header">Technical Skills</div>
+    </div>
+
+<!-- Continue inside the same <body> and <div class="container"> from Part 1 -->
+
+    <!-- Technical Skills -->
+    <div id="Skills">
+      <ul>
+        <li><strong>Control Systems:</strong> PID-tuning, Loop Shaping, Disturbance Rejection, ADRC, DC and BLDC Motor Control.</li>
+        <li><strong>Power Electronics:</strong> Motor Controller (H-Bridge and Inverter), Power Converters, Solar-MPPT.</li>
+        <li><strong>Electric Vehicles:</strong> Vehicle Dynamics, Tire Dynamics, Autonomous Vehicles, Energy Efficiency, In-Wheel Motors, Electric Powertrain Hardware/Software, System Engineering, Root-Cause Analysis.</li>
+        <li><strong>Embedded Systems & HW-SW Co-Design:</strong> STM32, dsPIC, ESP32, Raspberry Pi with USART, CAN, SPI, I²C protocols.</li>
+        <li><strong>Software & Simulation:</strong> MATLAB, Simulink, Octave, C/C++, Python, CANoe, Bash, LaTeX.</li>
+      </ul>
+    </div>
+
+    <!-- Ph.D. Research -->
+    <div id="PhDResearch" style="padding-top: 30px">
+      <div class="section-header">Ph.D. Research: Abstract & Key Contributions</div>
+
+      <p><strong>Thesis title:</strong> Energy Usage and Tire Usage in Electric Vehicles with In-Wheel Motors.</p>
+
+      <p><strong>Abstract:</strong> Electric vehicles (EVs) with in-wheel motors (IWMs) are a rapidly emerging technology … This thesis explores EVs with IWMs from two perspectives — energy usage and tire usage.</p>
+
+      <p>Towards the energy usage perspective, this thesis considers battery-powered EVs (BEVs) across a wide power interval and groups them into five classes. It concludes that the tank-to-wheel energy efficiency of an IWM BEV may be up to 18% higher than that of a single-motor drive BEV of the same power. In examining how efficient BEVs are with respect to internal combustion engine vehicles, the well-to-wheels efficiencies are ≈33%, 30%, and 18% respectively for natural gas pathway.</p>
+
+      <p>Towards the tire usage perspective, the thesis focuses on 4WIS4WID EVs (four-wheel independent steering and drive). It performs block-diagrammatic examinations of existing path-tracking control algorithms to evaluate optimal tire usage (OTU). It finds that motor control systems using disturbance-observer-based control (DOBC) and active disturbance rejection control (ADRC) are sufficient for achieving OTU in simulation.</p>
+
+      <figure style="text-align:center;">
+        <img src="PS.png" alt="PhD Problem Statement" style="border:2px solid #000;border-radius:8px;width:90%;max-width:800px;">
+        <figcaption><em>Figure: Short introduction and problem statement of my PhD thesis.</em></figcaption>
+      </figure>
+
+      <div class="section-header">Key Contributions</div>
+      <ul>
+        <li>A generalized Energy Flow Diagram (EFD) for calculating Tank-to-Wheel energy efficiency for all types of BEVs.</li>
+        <li>A control-system-theoretic block diagram of the EFD with derivation of an equation to compute efficiency.</li>
+        <li>An extensive literature survey to estimate efficiencies for eight stages of energy flow across five BEV types.</li>
+        <li>A graph of TTW energy efficiency versus electric vehicle power and analysis of improvement strategies.</li>
+        <li>EFDs for calculating Well-to-Wheel efficiency of IWM BEVs, SMD BEVs, and ICE vehicles (natural gas pathway).</li>
+        <li>Examination of Optimal Tire Usage (OTU) in 4WIS4WID EVs and identification of necessary motor control modifications.</li>
+        <li>Comparative study of Path-Tracking Control algorithms and discussion on disturbance observer and ADRC schemes.</li>
+        <li>Recommendations for improving TTW efficiency and achieving OTU in simulation and practical implementations.</li>
+      </ul>
+    </div>
+
+    
+    <!-- Fellowships -->
+    <div id="Fellowship" style="padding-top: 30px">
+      <div class="section-header">Fellowships</div>
+      <ul>
+        <li><strong>Ph.D. Fellowship</strong> Funded by MHRD, Government of India (2016–2023).</li>
+        <li><strong>GATE Scholarship</strong> From MHRD, Government of India (2010–2012).</li>
+      </ul>
+    </div>
+
+    <!-- Publications -->
+    <div id="Publications" style="padding-top: 30px">
+      <div class="section-header">Publications</div>
+      <ul style="line-height: 1.8; margin-left: 20px; list-style-type: disc;">
+  <li>
+    <strong>Dileep Kumar</strong> <em>et al.</em>
+    <em>Energy efficiency of battery electric vehicles with in-wheel motors.</em>
+    SAE International Journal of Sustainable Transportation, Energy, Environment, & Policy,
+    4 (13-04-01-0002), 2022, doi:10.4271/13-04-01-0002.
+  </li>
+
+  <li style="margin-top: 12px;">
+    <strong>Dileep Kumar</strong> <em>et al.</em>
+    <em>On Optimal Tire Usage in the Path-Tracking Control of Four-Wheel Independent Steering
+    Four-Wheel Independent Drive Electric Vehicles.</em>
+    SAE International Journal of Connected and Automated Vehicles,
+    9(2):2026, doi:10.4271/12-09-02-0014.
+  </li>
+
+  <li style="margin-top: 12px;">
+    <strong>Dileep Kumar</strong> <em>et al.</em>
+    <em>Control and Simulation of Smart Backup System for Photovoltaic Array in MATLAB/Simulink.</em>
+    IEEE International Conference on Advanced Research in Engineering and Technology (ICARET-2013),
+    doi:03.AETS.2013.2.120.
+  </li>
+</ul>
+
+    </div>
 
 
-     
-  <tr id="Education">
-    <td colspan="2" align="middle" bgcolor="lightblue"
-    style="font-size:18">
-   <b><font style="font-family: Georgia; font-variant: small-caps;
-   font-size: 100%">  M.Tech Research: Key Contriubutions</font> </b>
-    </td>
-  </tr>
+    <!-- Footer -->
+    <footer style="text-align:center;margin-top:50px;font-size:14px;">
+      © 2025 Dr. Dileep Kumar – All Rights Reserved.
+    </footer>
 
-  
-   <tr>
-    <td  colspan="2" style="font-size:15" bgcolor="#FFDEAD" align = "justify">
-      
+  </div> <!-- end .container -->
 
-	 <strong> Thesis title: </strong> Modeling and Control of Emerging Generation Technologies-based Distributed Generation System.
+  </div>
 
-      <ul> 
-      <br> 
-            <li> Developed a MATLAB and Simulink Model (Inverter with
-AC and DC loads) for a Smart Battery-Backup System for a Solar Panel
-by employing a Maximum Power-Point Tracker Algorithm.</li> 
-        </ul>
-    </td>
-   </tr>
-
-     
-  <tr id="Education">
-    <td colspan="2" align="middle" bgcolor="lightblue"
-    style="font-size:18">
-   <b><font style="font-family: Georgia; font-variant: small-caps;
-   font-size: 100%">  B.Tech Project: Key Contriubutions</font> </b>
-    </td>
-  </tr>
-
-  
-   <tr>
-    <td  colspan="2" style="font-size:15" bgcolor="#FFDEAD" align = "justify">
-      
-
-	<strong> Project title: </strong> Demonstrations of Full-Duplex
-       Communications Using a) 8051 µC (Assembly and C), and b) Sparton-3E
-       FPGA kits (VHDL) for Collecting Data from Multiple Nodes in a
-	Data Acquision Systems. <br>
-	<ul>
-            <li> Data Acquisition System for Real-Time Full-Duplex
-	      Comm using 8051 and RS485 in Assembly and C. </li> <br>
-	    <li>Full-Duplex Comm between Two Spartan-3e Kits with a
-Computer with various baud rates using VHDL. </li>
-        </ul>
-    </td>
-   </tr>
-
-   
-    <tr id="Fellowship">
-    <td colspan="2" align="middle" bgcolor="lightblue"
-    style="font-size:18">
-   <b><font style="font-family: Georgia; font-variant: small-caps;
-   font-size: 100%"> Fellowship & Trainings</font> </b>
-    </td>
-  </tr>
-
-  
-   <tr>
-    <td  colspan="2" style="font-size:15" bgcolor="#FFDEAD" align = "justify">
-
- <ul>
-            <li>Institute Fellowship, IIT Kanpur (2021)</li>
-            <li>MHRD Scholarships (2010 & 2015)</li>
-        </ul>
-    </td>
-
-   </tr>
-
-
-   
-   
-    <tr>
-    <td colspan="2" align="middle" bgcolor="lightblue"
-    style="font-size:18">
-   <b><font style="font-family: Georgia; font-variant: small-caps;
-   font-size: 100%"> Hobbies</font> </b>
-    </td>
-  </tr>
-
-  
-   <tr>
-    <td  colspan="2" style="font-size:15" bgcolor="#FFDEAD" align = "justify">
-
-
-        <p>Badminton, Chess, Music, Embedded Hardware & Software Development</p>
-       
-    </td>
-
-   </tr>
-
-    <tr>
-    <td colspan="2" align="middle" bgcolor="lightblue"
-    style="font-size:18">
-   <b> <font style="font-family: Georgia; font-variant: small-caps;
-   font-size: 100%">Publications</font></b>     
-    </td>
-  </tr>
-  
-   <tr id="Publications" bgcolor="#FFDEAD">
-    <td colspan="2" style="font-size:15" align = "justify">
-     <ol>
-      <li>Dileep Kumar, Vasu Jain, and Ramprasad Potluri.<em> Energy
-efficiency of battery electric vehicles with in-wheel motors. </em>
-SAE International Journal of Sustainable Transportation, Energy,
-Environment, & Policy, 4 (13-04-01-0002), 2022,
-	doi:10.4271/13-04-01-0002</li>
-       <li>Dileep Kumar and Ramprasad Potluri.<em> Significance of
-Motor Control Systems for Optimal Tire Usage in 4WIS4WID Electric
-	   Vehicles. [Accepted on 02/10/2025 for Publication in SAE International Journal of Connected and Automated Vehicles] </em> </li>
-      <li>Dileep Kumar, Ashiwani Kumar, Neha Gupta and Ramesh
-Kumar <em> Control and Simulation of Smart Backup System for
-Photovoltaic Array in MATLAB/simulink </em> IEEE International
-Conference on Advanced Research in Engineering and Technology,
-ICARET-2013, doi:03.AETS.2013.2.120. </li>
-    </ol></td>
-   </tr>
-
- 
-   
-  </tbody>
- </table>
 
 </body>
 </html>
+
+
+
