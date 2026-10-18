@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mood Shift Journal | Guided Reflection</title>
+<style>
+/* Only the techniques in Step 7 use a three-column, five-row layout. */
+.technique-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(5,auto);grid-auto-flow:column;gap:8px 16px}
+.technique-options label{display:flex;align-items:flex-start;gap:6px;min-width:0;font-weight:normal}
+@media(max-width:700px){.technique-options{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}}
+
+:root{--accent:#2c3e50;--line:#cbd2d9;--soft:#f1f4f6;--text:#222;--white:#fff}*{box-sizing:border-box}body{font-family:Arial,Helvetica,sans-serif;background:#fafafa;color:var(--text);line-height:1.5;margin:0;padding:22px}.page{max-width:1100px;margin:auto;background:white;padding:30px;border:1px solid #ccc;border-radius:8px}h1{text-align:center;color:var(--accent);margin:0}h2{color:var(--accent);font-size:1.15rem;margin:0 0 8px}p{margin:8px 0}.intro{text-align:center;max-width:850px;margin:12px auto 25px;font-size:.92rem;color:#555}.step{border:1px solid var(--line);border-radius:8px;margin:18px 0;padding:18px;background:white;break-inside:avoid}.stephead{display:flex;gap:0;align-items:center;border-bottom:2px solid var(--soft);padding-bottom:9px;margin-bottom:12px}.hint{color:#555;font-size:.9rem;margin:5px 0 12px}.field{display:flex;flex-direction:column;gap:5px;margin:10px 0}label{font-weight:600}input[type=text],input[type=datetime-local],textarea,select,input[type=number]{border:1px solid #aeb7c0;border-radius:5px;padding:9px;font:inherit;background:white;color:var(--text)}textarea{width:100%;min-height:75px;resize:vertical}.event-row{display:grid;grid-template-columns:minmax(0,2fr) minmax(220px,1fr);gap:18px;align-items:start}.event-row .field{min-width:0}.event-row input[type=datetime-local]{width:100%;max-width:100%}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{display:inline-flex;align-items:center;gap:6px;padding:6px 9px;border:1px solid var(--line);border-radius:6px;background:var(--soft);font-size:.9rem;font-weight:normal}.group{margin:12px 0}.group strong{display:block;margin-bottom:7px;color:var(--accent)}.item{padding:12px;border:1px solid var(--line);border-radius:7px;margin:10px 0;background:#fff}.itemhead{display:flex;justify-content:space-between;gap:12px;align-items:center}.ratings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:10px}.ratings label{font-size:.88rem}.ratings input{width:100%;margin-top:4px}.ratings .readonly-rating{display:block;background:var(--soft);border:1px solid var(--line);border-radius:5px;padding:9px;margin-top:4px;font-weight:bold}.rating-note{margin:4px 0 0;color:#666;font-size:.78rem}.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.button{background:#eee;color:var(--accent);border:1px solid #999;border-radius:6px;padding:9px 14px;font-weight:600;cursor:pointer}.button:hover{background:#ddd}.button.primary{background:var(--accent);color:#fff}.button.danger{color:#8a2832}.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:22px 0 5px}.small{font-size:.82rem;color:#666}.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.options label{font-size:.88rem;font-weight:normal}.thought-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.thought-card{border:1px solid var(--line);border-radius:8px;padding:13px;margin:12px 0;break-inside:avoid}.thought-card .reference{background:var(--soft);border:1px solid var(--line);border-radius:5px;padding:9px;white-space:pre-wrap;overflow-wrap:anywhere}#addReflection{margin-top:8px}.thought-card .remove-btn{margin-top:8px}.thought-card h3{color:var(--accent);font-size:1rem;margin:0 0 10px}.status{text-align:center;color:#286b37;min-height:22px}.muted{background:var(--soft);padding:12px;border-radius:6px}.nav{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin:15px 0}.nav a{color:var(--accent);font-size:.83rem;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:5px 8px}.reflection{display:grid;grid-template-columns:1fr 1fr;gap:12px}.reframe-title{font-size:1rem;color:var(--accent);margin:0 0 8px}.reflection .reference{min-height:58px;white-space:pre-wrap;overflow-wrap:anywhere}.reflection .item{margin:0}.reflection textarea#feelingValues,.reflection textarea#thoughtValues{min-height:160px}.creator-footer{max-width:1100px;margin:14px auto 24px;text-align:center;color:#666;font-size:.78rem;line-height:1.5;padding:0 12px}.hidden{display:none!important}.decision{margin:15px 0;padding:14px;border:1px solid var(--line);border-radius:7px;background:#fafbfc}.decision>p{margin:0 0 9px;font-weight:600}.decision-options{display:flex;flex-wrap:wrap;gap:18px}.decision-options label{display:inline-flex;align-items:center;gap:6px;cursor:pointer}.decision-feedback{margin-top:10px;padding:10px;background:var(--soft);border-radius:5px}.decision-feedback:empty{display:none}.decision-feedback a{color:var(--accent);font-weight:bold}.effectiveness-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:12px 0}.effectiveness-row label{font-weight:600}.effectiveness-row input{width:85px}.effectiveness-note{font-size:.82rem;color:#666}@media print{.decision-options input{accent-color:#2c3e50}}@media(max-width:700px){body{padding:7px}.page{padding:13px}.event-row,.grid2,.ratings,.options,.thought-grid,.reflection{grid-template-columns:1fr}.step{padding:12px}}@page{size:A4;margin:12mm}@media print{body{background:white;padding:0}.page{border:0;padding:0;max-width:none}.actions,.nav,.add-btn,.remove-btn,#status{display:none!important}.step{break-inside:auto;page-break-inside:auto}textarea{overflow:visible;min-height:70px}.thought-card,.item{break-inside:avoid}a{color:inherit;text-decoration:none}}
+</style></head><body><main class="page"><h1>Mood Shift Journal</h1><p class="intro">A guided mood-shifting tool designed to help you understand and manage upsetting emotions by examining your thoughts and developing more balanced perspectives using Cognitive Behavioral Therapy (CBT) techniques. This independently developed educational journal is based on general CBT principles and inspired in part by Dr. David D. Burns’ <a href="https://feelinggood.com/daily-mood-journal/" target="_blank" rel="noopener noreferrer">Daily Mood Journal</a>. It is not affiliated with or endorsed by Dr. Burns or Feeling Good. Your entries are stored locally in your browser and are not sent to a server by this tool. You may print or save your journal as a PDF.</p>
+<section class="step" id="s1"><div class="stephead"><h2>Step 1:
+Describe the Upsetting Situation in
+Brief</h2></div><p class="hint">Briefly describe one specific
+upsetting situation. Include what happened, without making assumptions
+about other people's
+intentions.</p><div class="event-row"><div class="field"><label for="event">Upsetting
+situation</label><textarea id="event" placeholder="e.g., I disagreed
+with my spouse about an important
+decision."></textarea></div><div class="field"><label for="when">Date
+and time</label><input id="when"
+		       type="datetime-local"></div></div></section>
+
+<section class="step" id="s2"><div class="stephead"><h2>Step 2: Identify Your Feelings, Moods, or Emotions — Select and Rate Them</h2></div><p class="hint">Select the feelings you noticed. For each selected feeling, estimate its intensity on a personal 0–10 scale (0 = absent, 10 = extremely strong). These are subjective ratings, not clinical measurements.</p><div id="feelingGroups"></div><div class="row"><label for="customFeeling">Another feeling</label><input id="customFeeling" type="text" placeholder="e.g., disappointed"><button class="button add-btn" type="button" id="addFeeling">Add feeling</button></div><div id="feelingRows"></div></section>
+<section class="step" id="s3"><div class="stephead"><h2>Step 3: Capture the Automatic or Upsetting Thoughts Behind the Situation and Feelings</h2></div><p class="hint">Write the automatic or upsetting thoughts that came to mind in the situation and contributed to the feelings selected in Step 2. Record each thought separately.</p><div id="thoughts"></div><button class="button add-btn" id="addReflection" type="button">+ Add Upsetting Thought</button></section>
+<section class="step" id="s4"><div class="stephead"><h2>Step 4: Capture Core Values and Benefits of Feelings and Thoughts Through Positive Reframing</h2></div><p class="hint">Write down the core values or potential benefits reflected by your selected feelings and thoughts.</p><div class="reflection"><div class="item"><h3 class="reframe-title">Feelings selected in Step 2</h3><div id="reframeFeelings" class="reference" aria-live="polite">No feelings selected yet in Step 2.</div><div class="field"><label for="feelingValues">Core Values / Benefit</label><textarea id="feelingValues" placeholder="e.g., Feeling sad might show that love and connection are important to me. Feeling frustrated might show that I care about fairness."></textarea><p class="rating-note">Write down the core values or potential benefits reflected by your selected feelings.</p></div></div><div class="item"><h3 class="reframe-title">Upsetting thoughts from Step 3</h3><div id="reframeThoughts" class="reference" aria-live="polite">No upsetting thoughts entered yet in Step 3.</div><div class="field"><label for="thoughtValues">Core Values / Benefit</label><textarea id="thoughtValues" placeholder="e.g., The thought ‘I am not doing enough’ might reflect a commitment to responsibility, effort, and improvement."></textarea><p class="rating-note">Write down the core values or possible benefits underlying the upsetting thoughts, without assuming those thoughts are accurate.</p></div></div></div></section>
+<section class="step" id="s5"><div class="stephead"><h2>Step 5: Set Healthy Intensity That Retains the Core Values and Benefits</h2></div><p class="hint">Use the initial intensity from Step 2 as a read-only reference. Set a healthy intensity for each feeling based on your personal situation and the core values identified in Step 4. These values are personal goals, not universal medical standards.</p><div id="targetSummary">Choose feelings in Step 2 to set healthy intensities.</div></section>
+<section class="step" id="s6"><div class="stephead"><h2>Step 6: Find Thought Distortions in the Upsetting Thoughts</h2></div><p class="hint">For each thought recorded in Step 3, select any thinking patterns that may be relevant. These are descriptive CBT concepts, not diagnoses.</p><div id="patternCards"></div><p class="small" style="margin-top:12px"><strong>Acknowledgment:</strong> The cognitive distortions named here are discussed in the works of Dr. David D. Burns, including <em>Feeling Good: The New Mood Therapy</em> and <em>Feeling Great</em>. This independent educational journal lists the names of these thinking patterns without reproducing the books’ explanations or examples. This journal is not affiliated with or endorsed by Dr. Burns.</p></section>
+<section class="step" id="s7"><div class="stephead"><h2>Step 7: Write a More Realistic Alternative Thought</h2></div><p class="hint">For each upsetting thought, write a more realistic alternative thought that (1) substantially reduces your belief in the original upsetting thought and (2) is something you strongly believe. You can use the listed techniques to develop your alternative thought. Select the technique or techniques you used, then rate how strongly you believe the alternative.</p><div id="alternativeCards"></div><p class="small" style="margin-top:12px"><strong>Acknowledgment:</strong> The CBT techniques named here are discussed in the works of Dr. David D. Burns, including <em>Feeling Good: The New Mood Therapy</em> and <em>Feeling Great</em>. This independent educational journal lists technique names without reproducing their book explanations or examples. This journal is not affiliated with or endorsed by Dr. Burns.</p></section>
+<section class="step" id="s8"><div class="stephead"><h2>Step 8: Reassess Your Belief in the Upsetting Thought</h2></div><p class="hint">Review the original upsetting thought from Step 3 and record how strongly you believe it now. Initial beliefs are shown as read-only references.</p><div id="recheckCards"></div></section>
+<section class="step" id="s9"><div class="stephead"><h2>Step 9: Reassess Your Emotional Intensity</h2></div><p class="hint">Review your initial intensities from Step 2 and the healthy intensities from Step 5. Enter how strongly you feel each emotion now.</p><div id="reviewSummary">Your selected feelings will appear here.</div></section>
+<section class="step" id="s10"><div class="stephead"><h2>Step 10: Mood Shift Check</h2></div><p class="hint">Reflect on your updated beliefs and feelings. There is no required outcome, and it is okay if a change takes more time.</p>
+<div class="decision" id="beliefDecision"><p>Did you notice in Step 8 a reduction in your belief in the original upsetting thought(s)?</p><div class="decision-options" role="radiogroup" aria-label="Reduction in belief"><label><input type="radio" name="beliefReduced" value="yes"> Yes</label><label><input type="radio" name="beliefReduced" value="no"> No</label></div><div id="beliefFeedback" class="decision-feedback" aria-live="polite"></div></div>
+<div class="decision"><p>Are your current emotion intensities in Step 9 approximately equal to, or close to, the healthy intensities you set in Step 5?</p><div class="decision-options" role="radiogroup" aria-label="Current intensity compared with healthy intensity"><label><input type="radio" name="intensityReached" value="yes"> Yes</label><label><input type="radio" name="intensityReached" value="no"> No</label></div><div id="intensityFeedback" class="decision-feedback" aria-live="polite"></div></div>
+<div class="decision"><p>Did you experience a shift in your mood?</p><div class="decision-options" role="radiogroup" aria-label="Mood shift experienced"><label><input type="radio" name="moodShift" value="yes"> Yes</label><label><input type="radio" name="moodShift" value="no"> No</label></div><div id="moodFeedback" class="decision-feedback" aria-live="polite"></div></div>
+<div class="effectiveness-row"><label for="journalEffectiveness">How effective was this journal in helping you shift your mood? (0–10)</label><input id="journalEffectiveness" type="number" min="0" max="10" step="1" inputmode="numeric" placeholder="0–10"><span class="effectiveness-note">0 = not effective; 10 = extremely effective</span></div></section>
+<div class="actions"><button class="button primary" id="save" type="button">Save draft</button><button class="button" id="load" type="button">Load draft</button><button class="button danger" id="clear" type="button">Clear journal</button><button class="button" id="print" type="button">Print / Save as PDF</button></div><p class="status" id="status" role="status"></p><p class="small">Privacy: Save Draft uses this browser's local storage, not a server. Other people using the same browser profile may be able to access saved entries. Clear Journal removes the saved draft. This journal is educational and is not a substitute for professional mental-health care.</p></main>
+<footer class="creator-footer">© 2026 Dr. Dileep Kumar. Mood Shift Journal — original journal presentation, independently authored text, and software implementation. CBT concepts and third-party works remain the property of their respective rights holders.</footer>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), KEY='moodShiftTenStepDraftV1';
+const categories={"Sadness and Hopelessness":["Sad","Hopeless","Discouraged","Worthless"],"Anxiety and Worry":["Anxious","Worried","Afraid","Nervous","Panicked"],"Anger and Frustration":["Angry","Frustrated","Resentful","Irritated"],"Alone and Loneliness":["Lonely","Rejected","Inadequate"]};
+const patterns=['All-or-nothing thinking','Mind reading','Fortune telling','Overgeneralization','Mental filtering','Discounting positives','Should (or Hidden Should) statements','Magnification or minimization','Emotional reasoning','Self-blame','Blaming others','Labeling'];
+const strategies=['Straightforward Technique','Examine the Evidence','Survey Technique','Experimental Technique','Double Standard Technique','Thinking in Shades of Gray','Socratic Method','Reattribution','Let’s Define Terms','Acceptance Paradox','Be Specific','Semantic Method','Worst, Best, Average','Shame-Attacking Exercises','Exposure Technique'];
+let feelings=[],thoughts=[],nextId=1;
+function el(tag,attrs={},content=''){const x=document.createElement(tag);Object.entries(attrs).forEach(([k,v])=>{if(k==='class')x.className=v;else x.setAttribute(k,v)});if(content)x.textContent=content;return x}
+function notice(s){$('status').textContent=s}
+function inputNum(value,callback,caption){const lab=el('label',{},caption);const inp=el('input',{type:'number',min:'0',max:'10',step:'0.5','aria-label':caption});inp.value=value;inp.addEventListener('change',()=>{let v=Number(inp.value);if(!Number.isFinite(v))v=0;v=Math.max(0,Math.min(10,v));inp.value=v;callback(v);renderSummaries()});lab.append(inp);return lab}
+function renderCategories(){const root=$('feelingGroups');root.replaceChildren();Object.entries(categories).forEach(([title,items])=>{const g=el('div',{class:'group'});g.append(el('strong',{},title));const chips=el('div',{class:'chips'});items.forEach(name=>{const label=el('label',{class:'chip'});const cb=el('input',{type:'checkbox'});cb.checked=feelings.some(f=>f.name===name);cb.addEventListener('change',()=>{if(cb.checked)addFeel(name);else removeFeel(name)});label.append(cb,document.createTextNode(name));chips.append(label)});g.append(chips);root.append(g)})}
+function addFeel(name){name=name.trim().slice(0,80);if(!name||feelings.some(f=>f.name.toLowerCase()===name.toLowerCase()))return;feelings.push({name,now:0,target:0,after:0});renderFeelings();renderCategories()}
+function removeFeel(name){feelings=feelings.filter(f=>f.name!==name);renderFeelings();renderCategories()}
+function readonlyRating(value,caption){const lab=el('label',{},caption);const span=el('output',{class:'readonly-rating','aria-label':caption},String(value)+'/10');lab.append(span);return lab}
+function renderReframingReferences(){
+ const f=$('reframeFeelings'),t=$('reframeThoughts');
+ f.textContent=feelings.length?feelings.map(x=>'• '+x.name).join('\n'):'No feelings selected yet in Step 2.';
+ const entries=thoughts.map((x,i)=>({i,text:String(x.original||'').trim()})).filter(x=>x.text);
+ t.textContent=entries.length?entries.map(x=>'Upsetting Thought '+(x.i+1)+': '+x.text).join('\n'):'No upsetting thoughts entered yet in Step 3.';
+}
+function renderFeelings(){
+ const root=$('feelingRows');root.replaceChildren();
+ feelings.forEach(f=>{
+  const card=el('div',{class:'item'}),top=el('div',{class:'itemhead'});
+  top.append(el('strong',{},f.name));
+  const rm=el('button',{class:'button remove-btn',type:'button'},'Remove');rm.addEventListener('click',()=>removeFeel(f.name));top.append(rm);card.append(top);
+  card.append(inputNum(f.now,v=>f.now=v,'Initial intensity (0–10)'));
+  root.append(card);
+ });
+ renderSummaries();
+ renderReframingReferences();
+}
+function renderSummaries(){
+ const target=$('targetSummary'),review=$('reviewSummary');
+ if(!feelings.length){target.textContent='Choose feelings in Step 2 to set healthy intensities.';review.textContent='Your selected feelings will appear here.';return}
+ // Update existing display values without destroying focused inputs.
+ function renderStage(root,stage){
+  const identities=feelings.map(f=>f.name);
+  const current=Array.from(root.children).map(node=>node.dataset.feeling);
+  if(JSON.stringify(identities)!==JSON.stringify(current)){
+    root.replaceChildren();
+    feelings.forEach(f=>{
+      const card=el('div',{class:'item','data-feeling':f.name});
+      card.append(el('strong',{},f.name));
+      const r=el('div',{class:'ratings'});
+      r.append(readonlyRating(f.now,'Step 2 · Initial intensity'));
+      if(stage===5){r.append(inputNum(f.target,v=>f.target=v,'Step 5 · Healthy intensity (0–10)'))}
+      else {r.append(readonlyRating(f.target,'Step 5 · Healthy intensity'),inputNum(f.after,v=>f.after=v,'Step 9 · Current intensity (0–10)'))}
+      card.append(r);root.append(card);
+    });
+  }
+  Array.from(root.children).forEach((card,i)=>{
+    const f=feelings[i], outputs=card.querySelectorAll('output.readonly-rating');
+    outputs[0].textContent=f.now+'/10';
+    if(stage===9)outputs[1].textContent=f.target+'/10';
+  });
+ }
+ renderStage(target,5);renderStage(review,9);
+}
+
+function blankThought(id){return {id,original:'',before:0,after:0,patterns:[],evidence:'',counter:'',alternative:'',confidence:0,strategies:[]}}
+function multiChoices(arr,chosen,onChange){const div=el('div',{class:'options'});arr.forEach(name=>{const label=el('label');const cb=el('input',{type:'checkbox'});cb.checked=chosen.includes(name);cb.addEventListener('change',()=>onChange(name,cb.checked));label.append(cb,document.createTextNode(' '+name));div.append(label)});return div}
+function thoughtField(t,title,key,placeholder,rows=3){const wrap=el('div',{class:'field'});const inp=el('textarea',{rows:String(rows),placeholder,'aria-label':title||'Upsetting thought'});inp.value=t[key]||'';inp.addEventListener('input',()=>{t[key]=inp.value;syncThoughtReferences()});if(title)wrap.append(el('label',{},title));wrap.append(inp);return wrap}
+function reference(title,value,mark){const wrap=el('div',{class:'field'});wrap.append(el('label',{},title));const out=el('output',{class:'reference','data-reference':mark},value);wrap.append(out);return wrap}
+function refText(s){return String(s||'').trim()||'Not entered yet'}
+function syncThoughtReferences(){renderReframingReferences();for(const t of thoughts){document.querySelectorAll('[data-thought-id="'+t.id+'"]').forEach(card=>{card.querySelectorAll('[data-reference]').forEach(out=>{const type=out.dataset.reference;out.textContent=type==='original'?refText(t.original):type==='before'?t.before+'/10':type==='alternative'?refText(t.alternative):type==='confidence'?t.confidence+'/10':type==='patterns'?(t.patterns.length?t.patterns.join(', '):'No thought distortions selected in Step 6 yet'):' '})})}}
+function renderThoughts(){
+ const s4=$('thoughts'),s7=$('patternCards'),s8=$('alternativeCards'),s9=$('recheckCards');
+ for(const root of [s4,s7,s8,s9])root.replaceChildren();
+ thoughts.forEach((t,i)=>{
+  const header=()=>{const card=el('article',{class:'thought-card','data-thought-id':String(t.id)});card.append(el('h3',{},'Upsetting Thought '+(i+1)));return card};
+  // Step 3 is solely the initial thought and initial belief.
+  const c4=header();c4.append(thoughtField(t,'','original','Write your upsetting thought here...',2));c4.append(inputNum(t.before,v=>{t.before=v;syncThoughtReferences()},'Initial belief (0–10)'));s4.append(c4);if(thoughts.length>1){const remove=el('button',{class:'button danger remove-btn',type:'button','aria-label':'Remove Upsetting Thought '+(i+1)},'Remove Upsetting Thought');remove.addEventListener('click',()=>{if(!confirm('Remove Upsetting Thought '+(i+1)+' and its entries in later steps?'))return;thoughts=thoughts.filter(x=>x.id!==t.id);renderThoughts()});c4.append(remove)}
+  // Step 6 selects patterns while preserving a read-only view of Step 3.
+  const c7=header();c7.append(reference('Step 3 · Original thought',refText(t.original),'original'));const p=el('div',{class:'field'});p.append(el('label',{},'Possible thinking patterns'));p.append(multiChoices(patterns,t.patterns,(name,checked)=>{t.patterns=checked?[...t.patterns,name]:t.patterns.filter(x=>x!==name);syncThoughtReferences()}));c7.append(p);s7.append(c7);
+  // Step 7 is the only place where alternative thoughts and their confidence are editable.
+  const c8=header();c8.append(reference('Step 3 · Original thought',refText(t.original),'original'));c8.append(reference('Step 3 · Initial belief',t.before+'/10','before'));
+  c8.append(reference('Step 6 · Selected Thought Distortions',t.patterns.length?t.patterns.join(', '):'No thought distortions selected in Step 6 yet','patterns'));
+  c8.append(thoughtField(t,'More realistic alternative thought','alternative','Write a realistic thought that strongly challenges the upsetting thought and that you genuinely believe.',3));c8.append(inputNum(t.confidence,v=>{t.confidence=v;syncThoughtReferences()},'Belief in the alternative thought (0–10)'));
+  const st=el('div',{class:'field'});st.append(el('label',{},'Which technique(s) did you use?'));const techniqueChoices=multiChoices(strategies,t.strategies,(name,checked)=>{t.strategies=checked?[...t.strategies,name]:t.strategies.filter(x=>x!==name)});techniqueChoices.classList.add('technique-options');st.append(techniqueChoices);c8.append(st);s8.append(c8);
+  // Step 8 is the only place where updated belief is editable.
+  const c9=header();c9.append(reference('Step 3 · Original thought',refText(t.original),'original'));c9.append(reference('Step 3 · Initial belief',t.before+'/10','before'));c9.append(inputNum(t.after,v=>t.after=v,'Step 8 · Updated belief in original thought (0–10)'));s9.append(c9);
+ });
+ syncThoughtReferences();
+}
+function getChoice(name){return document.querySelector('input[name="'+name+'"]:checked')?.value||''}
+function setChoice(name,value){document.querySelectorAll('input[name="'+name+'"]').forEach(r=>{r.checked=(r.value===value)})}
+function updateDecisions(){
+ const feedback={
+  beliefFeedback: getChoice('beliefReduced')==='yes'?'Good progress! You have noticed a reduction in belief.':getChoice('beliefReduced')==='no'?'Try a different technique in <a href="#s7">Step 7: Alternative thoughts</a>, then reassess your belief in Step 8.':'',
+  intensityFeedback: getChoice('intensityReached')==='yes'?'Great! Your current ratings are close to the healthy intensities you chose in Step 5.':getChoice('intensityReached')==='no'?'Try other techniques in <a href="#s7">Step 7</a>, then reassess your emotions in <a href="#s9">Step 9</a>.':'',
+  moodFeedback: getChoice('moodShift')==='yes'?'Well done! Take a moment to recognize the change you experienced.':getChoice('moodShift')==='no'?'Try again, starting at <a href="#s2">Step 2: Notice and rate your feelings</a>. A shift does not have to happen immediately.':''
+ };
+ Object.entries(feedback).forEach(([id,html])=>$(id).innerHTML=html);
+}
+document.querySelectorAll('input[name="beliefReduced"],input[name="intensityReached"],input[name="moodShift"]').forEach(r=>r.addEventListener('change',updateDecisions));
+function snapshot(){return {beliefReduced:getChoice('beliefReduced'),intensityReached:getChoice('intensityReached'),moodShift:getChoice('moodShift'),event:$('event').value,when:$('when').value,feelingValues:$('feelingValues').value,thoughtValues:$('thoughtValues').value,journalEffectiveness:$('journalEffectiveness').value,feelings,thoughts,nextId}}
+function restore(d){
+ ['beliefReduced','intensityReached','moodShift'].forEach(k=>setChoice(k,d[k]||''));updateDecisions();
+ $('journalEffectiveness').value=(d.journalEffectiveness!==undefined && d.journalEffectiveness!==null)?String(d.journalEffectiveness):'';
+ ['event','when','feelingValues','thoughtValues'].forEach(k=>$(k).value=typeof d[k]==='string'?d[k]:'');
+ feelings=Array.isArray(d.feelings)?d.feelings.filter(f=>f&&typeof f.name==='string'):[];
+ const saved=Array.isArray(d.thoughts)?d.thoughts.filter(t=>t&&typeof t==='object'):[];
+ // Migrate older fixed-ten drafts: drop unused blank thoughts while keeping any real entries.
+ const meaningful=t=>String(t.original||'').trim()||Number(t.before)||Number(t.after)||String(t.evidence||'').trim()||String(t.counter||'').trim()||String(t.alternative||'').trim()||Number(t.confidence)||(Array.isArray(t.patterns)&&t.patterns.length)||(Array.isArray(t.strategies)&&t.strategies.length);
+ const active=saved.filter((t,i)=>i===0||meaningful(t));
+ thoughts=(active.length?active:[blankThought(1)]).map((t,i)=>({...blankThought(i+1),...t,id:i+1,patterns:Array.isArray(t.patterns)?t.patterns.map(p=>p==='Should statements'?'Should (or Hidden Should) statements':p):[],strategies:Array.isArray(t.strategies)?t.strategies:[]}));
+ nextId=thoughts.length+1;
+ renderCategories();renderFeelings();renderThoughts();
+}
+$('journalEffectiveness').addEventListener('change',function(){if(this.value==='')return;const n=Number(this.value);this.value=Number.isFinite(n)?String(Math.max(0,Math.min(10,Math.round(n)))):''});
+$('addReflection').addEventListener('click',()=>{thoughts.push(blankThought(nextId++));renderThoughts();const cards=$('thoughts').querySelectorAll('.thought-card');const last=cards[cards.length-1];last?.querySelector('textarea')?.focus()});
+$('addFeeling').addEventListener('click',()=>{addFeel($('customFeeling').value);$('customFeeling').value=''});$('save').addEventListener('click',()=>{try{localStorage.setItem(KEY,JSON.stringify(snapshot()));notice('Draft saved in this browser.')}catch(e){notice('Unable to save draft in this browser.')}});$('load').addEventListener('click',()=>{try{const s=localStorage.getItem(KEY);if(!s){notice('No saved draft found.');return}restore(JSON.parse(s));notice('Draft loaded.')}catch(e){notice('Unable to load saved draft.')}});$('clear').addEventListener('click',()=>{if(!confirm('Clear all journal entries and the saved draft?'))return;try{localStorage.removeItem(KEY)}catch(e){}restore({});notice('Journal cleared.')});$('print').addEventListener('click',()=>window.print());
+renderCategories();renderFeelings();restore({});
+</script></body></html>

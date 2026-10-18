@@ -536,3 +536,82 @@ figcaption {
   a { color: inherit; text-decoration: none; }
   h2, h3, h4, figure, .distortion, .step-block { break-inside: avoid; }
 }
+
+
+/* ---------- October 2026 accessibility, attribution, footer ---------- */
+.page-byline {
+  margin: 0.3em 0 1.6em;
+  color: var(--ink-soft);
+  font-size: 0.91rem;
+  line-height: 1.65;
+}
+.byline-divider { margin: 0 0.45em; color: var(--ink-soft); }
+
+/* Collapsible table of contents on phones; visible on desktop by default.
+   The complete contents remain available without JavaScript. */
+.toc-details > summary {
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.4;
+  list-style: none;
+}
+.toc-details > summary::-webkit-details-marker { display: none; }
+.toc-details > summary::after {
+  content: "−";
+  color: var(--accent);
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 400;
+  flex: 0 0 auto;
+}
+.toc-details:not([open]) > summary::after { content: "+"; }
+.toc-details > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+.toc-details > .toc-outline { margin-top: 0.55em; }
+.toc-details .toc-outline a { overflow-wrap: anywhere; }
+
+.footer-inner { max-width: var(--content-width); margin: 0 auto; }
+.site-footer .footer-inner p { margin: 0.2em 0; }
+.site-footer a { color: var(--accent); }
+.site-footer .visitor-stat { color: var(--ink); font-weight: 600; }
+.site-footer .footer-meta { font-size: 0.94em; }
+#visitor-count { display: inline; font-weight: 700; color: var(--accent); }
+/* GoatCounter's documented HTML visitor-count markup */
+#visitor-count > div {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  font: inherit;
+  color: inherit;
+}
+#visitor-count #gcvc-for, #visitor-count #gcvc-by { display: none; }
+#visitor-count #gcvc-views { font: inherit; color: inherit; }
+
+@media (max-width: 640px) {
+  .page-byline { font-size: 0.88rem; }
+  .toc { padding: 12px 14px; }
+  .toc-outline a { line-height: 1.55; padding: 5px 2px; }
+  .site-nav .nav-inner { gap: 0 12px; }
+  .site-nav .links { gap: 0 12px; }
+  .site-nav .links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .table-wrap { scrollbar-width: thin; }
+}
+@media print {
+  .site-footer .visitor-stat { display: none; }
+}
